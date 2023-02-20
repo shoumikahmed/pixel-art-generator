@@ -70,6 +70,11 @@ gridButton.addEventListener('click', () => {
                 ), id;
                 checker(elementId)
             })
+
+            col.addEventListener(events[deviceType].up, () => {
+                draw = false;
+            })
+            div.appendChild(div);
         }
     }
 })
