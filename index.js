@@ -78,3 +78,29 @@ gridButton.addEventListener('click', () => {
         }
     }
 })
+
+function checker(elementId) {
+    let gridColumns = document.querySelectorAll(".gridCol");
+    gridColumns.forEach((element) => {
+        if (elementId == element.id) {
+            if (draw && !erase) {
+                element.style.backgroundColor = colorButton.value;
+            }
+            else if (draw && erase) {
+                element.style.backgroundColor = "transparent";
+            }
+        }
+    })
+}
+
+clearGridButton.addEventListener("click", () => {
+    container.innerHTML = ""
+})
+
+eraseBtn.addEventListener("click", () => {
+    erase = true;
+})
+
+paintBtn.addEventListener("click", () => {
+    erase = false;
+})
